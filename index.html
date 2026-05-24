@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Conexão VIP — Internet Fibra Óptica, Móvel 5G, Fixo e Câmeras</title>
+<meta name="description" content="Internet fibra óptica de alta velocidade, móvel 5G, telefone fixo e câmeras em Teófilo Otoni e no Vale do Jequitinhonha. Planos com Wi-Fi 6, instalação grátis e suporte 24h." />
+
+<link rel="icon" href="logo-conexaovip.webp" type="image/webp">
+<meta name="theme-color" content="#0F3A8E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Conexão VIP — Internet Fibra, Móvel 5G, Fixo e Câmeras">
+<meta property="og:description" content="Fibra óptica de verdade em Teófilo Otoni e no Vale do Jequitinhonha. Wi-Fi 6, instalação grátis e suporte 24h.">
+<meta property="og:image" content="modelo.webp">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    /* Cores extraídas da logo: vermelho + azul */
+    --red:#E11C1C; --red-dark:#B81414;
+    --blue:#0F3A8E;        /* azul profundo (estrutura/texto) */
+    --blue-mid:#1C5BC0;    /* azul do swoosh */
+    --blue-bright:#2E7BE6; /* azul claro p/ gradiente */
+    --ink:#13233F;         /* texto principal (navy) */
+    --muted:#5C6B85;
+    --bg:#FFFFFF; --soft:#F3F6FC; --line:#E4EAF4;
+    --green:#1FA855;
+    --radius:20px; --ease:cubic-bezier(.22,1,.36,1); --maxw:1180px;
+    --shadow:0 24px 60px -30px rgba(15,58,142,.45);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:'Manrope',-apple-system,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  .display{font-family:'Sora',sans-serif;font-weight:800;letter-spacing:-.03em;line-height:1.02}
+  .wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 28px}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:var(--red);margin-bottom:16px}
+  .eyebrow::before{content:"";width:24px;height:3px;background:var(--red);border-radius:3px}
+
+  /* topo accent */
+  .topbar{height:4px;background:linear-gradient(90deg,var(--red) 0 45%,var(--blue-mid) 55% 100%)}
+
+  /* NAV */
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px 28px;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:.35s var(--ease);margin-top:4px}
+  nav.scrolled{border-color:var(--line);box-shadow:0 8px 30px -22px rgba(15,58,142,.5)}
+  nav .logo img{height:34px;display:block}
+  nav .links{display:flex;gap:28px;align-items:center;font-size:15px;font-weight:700}
+  nav .links a:not(.nav-cta){color:var(--ink);transition:color .2s}
+  nav .links a:not(.nav-cta):hover{color:var(--red)}
+  nav .links a:not(.nav-cta){position:relative}
+  nav .links a:not(.nav-cta)::after{content:"";position:absolute;left:0;bottom:-6px;height:2px;width:0;background:var(--red);border-radius:2px;transition:width .25s var(--ease)}
+  nav .links a.active:not(.nav-cta){color:var(--ink)}
+  nav .links a.active:not(.nav-cta)::after,nav .links a:not(.nav-cta):hover::after{width:100%}
+  nav .nav-cta{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:100px;background:var(--red);color:#fff!important;font-weight:700;box-shadow:0 10px 24px -12px var(--red);transition:.25s var(--ease)}
+  nav .nav-cta:hover{transform:translateY(-2px);background:var(--red-dark)}
+  @media(max-width:940px){nav .links a:not(.nav-cta):not(.assinante){display:none}}
+  @media(max-width:520px){nav .links .assinante span{display:none}nav .logo img{height:28px}}
+
+  /* HERO — campo azul imersivo + modelo recortada + tipografia editorial */
+  header{position:relative;color:#fff;overflow:hidden;background:radial-gradient(125% 130% at 78% 0%,#1F62CC 0%,#103A8E 46%,#0A2657 100%)}
+  .hero-rule{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px);background-size:100% 68px;pointer-events:none}
+  .hero-arc{position:absolute;top:-26%;right:-16%;width:78%;opacity:.13;pointer-events:none}
+  header .wrap{position:relative;z-index:2}
+  .hgrid{display:grid;grid-template-columns:1fr 1fr;align-items:end;gap:20px;min-height:580px;padding-top:118px}
+  @media(max-width:900px){.hgrid{grid-template-columns:1fr;min-height:0;padding-top:120px}}
+  .hcol-text{padding-bottom:64px}
+  @media(max-width:900px){.hcol-text{padding-bottom:8px}}
+  .badge{display:inline-flex;align-items:center;gap:9px;font-size:13px;font-weight:700;color:#fff;padding:7px 15px;border:1px solid rgba(255,255,255,.24);border-radius:100px;background:rgba(255,255,255,.07);margin-bottom:26px}
+  .badge .pulse{width:8px;height:8px;border-radius:50%;background:#46E08B;position:relative}
+  .badge .pulse::before{content:"";position:absolute;inset:0;border-radius:50%;background:#46E08B;animation:ping 1.8s var(--ease) infinite}
+  @keyframes ping{0%{transform:scale(1);opacity:.7}100%{transform:scale(3);opacity:0}}
+  h1.hero{font-size:clamp(40px,6vw,72px);color:#fff;letter-spacing:-.03em;line-height:1.02}
+  h1.hero em{font-style:normal;color:#FF5440}
+  h1.hero .b{color:#84B3FF}
+  .hero-sub{margin-top:22px;max-width:470px;font-size:clamp(17px,2.2vw,20px);color:#C4D5F5}
+  .rating-inline{display:inline-flex;align-items:center;gap:9px;margin-top:24px;font-size:14.5px;color:#E8EEFB}
+  .rating-inline .stars{color:#FFC400;font-size:17px;letter-spacing:1px}
+  .rating-inline b{font-family:'Sora';font-weight:800;font-size:17px;color:#fff}
+  .rating-inline span{color:#9DB6E6}
+  .hero-actions{margin-top:28px;display:flex;gap:13px;flex-wrap:wrap;align-items:center}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:16px 28px;border-radius:12px;font-weight:700;font-size:16px;transition:transform .25s var(--ease),box-shadow .25s,background .25s,color .25s}
+  .btn-red{background:var(--red);color:#fff;box-shadow:0 16px 34px -14px rgba(225,28,28,.85)}
+  .btn-red:hover{transform:translateY(-3px);background:#fff;color:var(--blue)}
+  .btn-wa{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.26)}
+  .btn-wa:hover{transform:translateY(-3px);background:rgba(255,255,255,.18)}
+
+  /* modelo recortada sobre o azul */
+  .hcol-img{position:relative;align-self:end;justify-self:center;width:100%;max-width:540px}
+  .hcol-img .disc{position:absolute;left:50%;bottom:-3%;transform:translateX(-50%);width:120%;aspect-ratio:1;z-index:0;border-radius:50%;background:radial-gradient(circle at 50% 44%,rgba(160,198,255,.66),rgba(46,118,224,.14) 50%,transparent 67%)}
+  .hcol-img .disc::before,.hcol-img .disc::after{content:"";position:absolute;border-radius:50%;border:1.5px solid rgba(255,255,255,.13)}
+  .hcol-img .disc::before{inset:1%}
+  .hcol-img .disc::after{inset:13%;border-color:rgba(255,255,255,.22)}
+  /* anel externo extra (sinal) */
+  .hcol-img .rings{position:absolute;left:50%;bottom:-3%;transform:translateX(-50%);width:142%;aspect-ratio:1;border-radius:50%;border:1.5px solid rgba(255,255,255,.07);z-index:0}
+  .hcol-img .rings::after{content:"";position:absolute;inset:11%;border-radius:50%;border:1.5px solid rgba(255,255,255,.05)}
+  .hcol-img img{position:relative;z-index:2;width:100%;display:block;filter:drop-shadow(0 28px 48px rgba(5,18,52,.55))}
+  @media(max-width:900px){.hcol-img{max-width:330px}}
+
+  /* trust bar integrada (sem caixas) */
+  .trust{display:flex;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.16);position:relative;z-index:2}
+  .trust .t{flex:1 1 200px;display:flex;gap:13px;align-items:center;padding:22px;border-right:1px solid rgba(255,255,255,.12)}
+  .trust .t:last-child{border-right:0}
+  .trust .t .ic{color:#84B3FF;flex-shrink:0}
+  .trust .t b{font-family:'Sora';font-weight:700;display:block;font-size:15px;color:#fff}
+  .trust .t small{color:#9DB6E6;font-size:13px}
+  @media(max-width:760px){.trust .t{flex-basis:50%;border-right:0;padding:18px}}
+
+  section{padding:84px 0}
+  h2.sec{font-size:clamp(31px,5vw,52px);letter-spacing:-.03em;color:var(--ink);max-width:720px}
+  .sec-intro{color:var(--muted);max-width:560px;margin-top:14px;font-size:18px}
+  .soft{background:var(--soft)}
+
+  /* PLANOS */
+  .tab{display:inline-flex;align-items:center;gap:9px;margin-top:26px;padding:11px 22px;border-radius:100px;background:linear-gradient(135deg,var(--blue),var(--blue-mid));color:#fff;font-weight:700;box-shadow:var(--shadow)}
+  .plans{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:38px}
+  @media(max-width:980px){.plans{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:540px){.plans{grid-template-columns:1fr}}
+  .plan{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px 24px;display:flex;flex-direction:column;position:relative;transition:transform .35s var(--ease),box-shadow .35s var(--ease)}
+  .plan:hover{transform:translateY(-8px);box-shadow:var(--shadow)}
+  .plan.feat{background:linear-gradient(165deg,var(--blue),#0a2a6b);color:#fff;border-color:transparent}
+  .plan.feat .tag{position:absolute;top:-12px;left:50%;transform:translateX(-50%);white-space:nowrap;background:var(--red);color:#fff;font-size:12px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;padding:6px 14px;border-radius:100px;box-shadow:0 10px 20px -8px var(--red)}
+  .plan .name{font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--blue)}
+  .plan.feat .name{color:#9DC0FF}
+  .plan .speed{font-family:'Sora';font-weight:800;font-size:54px;letter-spacing:-.04em;line-height:1;margin-top:12px;display:flex;align-items:baseline;gap:8px}
+  .plan .speed sub{font-size:15px;font-weight:800;vertical-align:baseline;color:#fff;background:var(--red);padding:5px 11px;border-radius:100px;text-transform:uppercase}
+  .plan.feat .speed{color:#fff}
+  .plan .feats{list-style:none;margin:20px 0;display:flex;flex-direction:column;gap:11px;font-size:14px;font-weight:600}
+  .plan .feats li{display:flex;gap:10px;align-items:flex-start}
+  .plan .feats li .chk{width:21px;height:21px;border-radius:7px;background:rgba(28,91,192,.12);color:var(--blue-mid);display:grid;place-items:center;flex-shrink:0}
+  .plan.feat .feats li .chk{background:rgba(255,255,255,.16);color:#fff}
+  .plan .apps{display:flex;align-items:center;gap:13px;flex-wrap:wrap;background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:10px 13px;margin-bottom:18px;min-height:42px}
+  .plan.feat .apps{background:#fff;border-color:transparent}
+  .plan .apps img{height:15px;width:auto;display:block}
+  .plan .apps .lbl{font-size:11px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);display:inline-flex;align-items:center;gap:7px}
+  .plan .apps .lbl::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--blue-mid)}
+  .plan .price{margin-top:auto}
+  .plan .price .v{font-family:'Sora';font-weight:800;font-size:36px;color:var(--ink);letter-spacing:-.02em}
+  .plan.feat .price .v{color:#fff}
+  .plan .price .v sup{font-size:17px;font-weight:700;margin-right:2px}
+  .plan .price .per{color:var(--muted);font-size:14px}
+  .plan.feat .price .per{color:#9DC0FF}
+  .plan .per-day{display:inline-flex;align-items:center;gap:6px;margin-top:8px;font-size:12.5px;font-weight:700;color:var(--blue);background:rgba(28,91,192,.09);padding:5px 11px;border-radius:100px}
+  .plan.feat .per-day{color:#fff;background:rgba(255,255,255,.16)}
+  .plan.feat{box-shadow:0 30px 64px -28px rgba(8,28,75,.85)}
+  .plan .cta{margin-top:16px;text-align:center;padding:14px;border-radius:100px;font-weight:800;background:var(--red);color:#fff;transition:.25s var(--ease)}
+  .plan .cta:hover{background:var(--red-dark)}
+  .plan.feat .cta{background:#fff;color:var(--blue)}.plan.feat .cta:hover{background:#EAF1FF}
+
+  /* EXPERIÊNCIA */
+  .exp{display:grid;grid-template-columns:1fr 2fr;gap:18px;margin-top:36px;align-items:stretch}
+  @media(max-width:900px){.exp{grid-template-columns:1fr}}
+  .exp .intro{background:linear-gradient(165deg,var(--blue),#0a2a6b);color:#fff;border-radius:var(--radius);padding:42px;display:flex;flex-direction:column;justify-content:center;box-shadow:var(--shadow)}
+  .exp .intro h3{font-family:'Sora';font-weight:800;font-size:clamp(26px,3.4vw,38px);letter-spacing:-.03em;line-height:1.08}
+  .exp .intro p{color:#B7CBF0;margin-top:12px}
+  .exp .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  @media(max-width:620px){.exp .cards{grid-template-columns:1fr}}
+  .ec{border:1px solid var(--line);border-radius:var(--radius);padding:24px;background:#fff;display:flex;flex-direction:column;transition:.35s var(--ease)}
+  .ec:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+  .ec .lg{font-family:'Sora';font-weight:800;font-size:17px;color:var(--blue);margin-bottom:10px}
+  .ec h4{font-family:'Sora';font-weight:700;font-size:17px}
+  .ec p{color:var(--muted);font-size:14px;margin-top:6px;flex:1}
+  .ec a{margin-top:14px;font-weight:800;color:var(--red);display:inline-flex;gap:7px;transition:gap .25s}.ec a:hover{gap:12px}
+
+  /* MARCAS / STREAMING */
+  .brands{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:38px}
+  @media(max-width:700px){.brands{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:420px){.brands{grid-template-columns:1fr}}
+  .brand-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:28px 24px;display:flex;flex-direction:column;gap:14px;transition:.35s var(--ease)}
+  .brand-card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:transparent}
+  .brand-logo{min-height:52px;display:flex;align-items:center}
+  .brand-logo img{height:34px;width:auto;max-width:200px;object-fit:contain;display:block}
+  .brand-logo img.sq{height:48px;border-radius:11px}
+  .brand-card p{color:var(--muted);font-size:14px;line-height:1.5}
+  .brand-wm{font-family:'Sora';font-weight:800;letter-spacing:-.01em;display:inline-flex;align-items:center}
+
+  /* BADGES DE LOJA */
+  .store-badge{display:inline-flex;align-items:center;gap:11px;background:var(--ink);color:#fff;border-radius:12px;padding:10px 18px;transition:.25s var(--ease)}
+  .store-badge:hover{transform:translateY(-3px);background:#000}
+  .store-badge .st-txt{display:flex;flex-direction:column;line-height:1.12}
+  .store-badge .st-txt small{font-size:10px;opacity:.85;text-transform:uppercase;letter-spacing:.05em}
+  .store-badge .st-txt b{font-family:'Sora';font-weight:700;font-size:16px}
+
+  /* SERVIÇOS */
+  .services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:50px}
+  @media(max-width:820px){.services{grid-template-columns:1fr}}
+  .svc{border:1px solid var(--line);border-radius:var(--radius);padding:34px 30px 32px;background:#fff;transition:.35s var(--ease);position:relative;overflow:hidden}
+  .svc::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--red),var(--blue-mid));transform:scaleX(0);transform-origin:left;transition:transform .45s var(--ease)}
+  .svc:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:transparent}
+  .svc:hover::before{transform:scaleX(1)}
+  .svc .ic{color:var(--blue-mid);margin-bottom:20px}
+  .svc .ic svg{width:34px;height:34px}
+  .svc h3{font-family:'Sora';font-weight:700;font-size:23px}
+  .svc p{color:var(--muted);margin-top:8px;font-size:15.5px}
+
+  /* FAQ */
+  .faq-head{text-align:center;max-width:600px;margin:0 auto}
+  .faq-head .eyebrow{justify-content:center}
+  .faq-head h2{margin:0 auto}
+  .faq{max-width:780px;margin:42px auto 0;display:flex;flex-direction:column;gap:12px}
+  .faq details{border:1px solid var(--line);border-radius:16px;background:#fff;padding:0 24px;transition:box-shadow .3s var(--ease),border-color .3s}
+  .faq details[open]{box-shadow:var(--shadow);border-color:transparent}
+  .faq summary{list-style:none;cursor:pointer;padding:22px 0;font-family:'Sora';font-weight:700;font-size:18px;color:var(--ink);display:flex;justify-content:space-between;align-items:center;gap:16px}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary .pl{width:24px;height:24px;flex-shrink:0;position:relative}
+  .faq summary .pl::before,.faq summary .pl::after{content:"";position:absolute;background:var(--red);border-radius:2px;transition:.3s var(--ease)}
+  .faq summary .pl::before{top:11px;left:3px;right:3px;height:2px}
+  .faq summary .pl::after{left:11px;top:3px;bottom:3px;width:2px}
+  .faq details[open] summary .pl::after{transform:rotate(90deg);opacity:0}
+  .faq .ans{padding:0 0 24px;margin-top:-4px;color:var(--muted);font-size:15.5px;line-height:1.65;max-width:660px}
+
+  /* APP CLIENTE */
+  .appc{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;align-items:stretch}
+  @media(max-width:900px){.appc{grid-template-columns:1fr}}
+  .appc .txt{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:clamp(32px,5vw,52px)}
+  .appc .feat-list{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:26px 0}
+  @media(max-width:620px){.appc .feat-list{grid-template-columns:1fr}}
+  .appc .fl .ic{width:42px;height:42px;border-radius:12px;background:rgba(225,28,28,.1);color:var(--red);display:grid;place-items:center;margin-bottom:10px}
+  .appc .fl b{font-family:'Sora';font-weight:700;display:block;font-size:15.5px}
+  .appc .fl small{color:var(--muted);font-size:13px}
+  .stores{display:flex;gap:12px;flex-wrap:wrap}
+  .store{display:inline-flex;align-items:center;gap:10px;padding:13px 20px;border-radius:14px;background:var(--ink);color:#fff;font-weight:700;transition:.25s var(--ease)}
+  .store:hover{transform:translateY(-3px);background:var(--blue)}
+  .appc .mock{background:linear-gradient(165deg,var(--blue-mid),var(--blue));border-radius:var(--radius);display:grid;place-items:center;padding:40px;min-height:300px;box-shadow:var(--shadow)}
+  .phone{width:150px;height:300px;border-radius:30px;background:#fff;border:6px solid #0a2350;padding:16px 13px;display:flex;flex-direction:column;gap:9px;position:relative;box-shadow:0 30px 50px -20px rgba(0,0,0,.5)}
+  .phone .notch{position:absolute;top:11px;left:50%;transform:translateX(-50%);width:46px;height:6px;border-radius:10px;background:#0a2350}
+  .phone .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:18px}
+  .phone .grid i{aspect-ratio:1;border-radius:9px;display:block}
+  .phone .bar{height:11px;border-radius:6px;background:var(--soft)}.phone .bar.w{width:65%}
+
+  /* CENTRAL ATENDIMENTO — layout editorial 2 colunas */
+  .help-wrap{display:grid;grid-template-columns:.82fr 1.18fr;gap:54px;align-items:start}
+  @media(max-width:880px){.help-wrap{grid-template-columns:1fr;gap:30px}}
+  .help-intro{position:sticky;top:104px}
+  @media(max-width:880px){.help-intro{position:static}}
+  .help-intro .wa-cta{display:inline-flex;align-items:center;gap:10px;margin-top:26px;padding:15px 26px;border-radius:12px;background:var(--green);color:#fff;font-weight:700;transition:.25s var(--ease)}
+  .help-intro .wa-cta:hover{transform:translateY(-3px)}
+  .help-list{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+  .help-row{display:flex;align-items:center;gap:18px;padding:20px 26px;border-bottom:1px solid var(--line);transition:background .25s var(--ease),padding-left .3s var(--ease)}
+  .help-row:last-child{border-bottom:0}
+  .help-row:hover{background:var(--soft);padding-left:32px}
+  .help-row .ic{color:var(--red);flex-shrink:0}
+  .help-row .tx{flex:1}
+  .help-row .tx b{font-family:'Sora';font-weight:700;font-size:16.5px;display:block}
+  .help-row .tx small{color:var(--muted);font-size:13.5px}
+  .help-row .ar{color:#C7CEDC;transition:transform .25s var(--ease),color .25s}
+  .help-row:hover .ar{transform:translateX(5px);color:var(--red)}
+
+  /* COBERTURA (band azul) */
+  .cover{background:linear-gradient(135deg,var(--blue),var(--blue-mid));color:#fff;border-radius:var(--radius);padding:clamp(38px,6vw,70px);position:relative;overflow:hidden;box-shadow:var(--shadow)}
+  .cover svg.arc{position:absolute;bottom:-40%;left:-10%;width:70%;opacity:.14}
+  .cover .eyebrow{color:#fff}.cover .eyebrow::before{background:#fff}
+  .cover h2{font-family:'Sora';font-weight:800;font-size:clamp(28px,5vw,46px);letter-spacing:-.03em;position:relative}
+  .cities{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px;position:relative}
+  .cities span{padding:9px 17px;border:1px solid rgba(255,255,255,.28);border-radius:100px;font-weight:600;font-size:15px;transition:.25s var(--ease)}
+  .cities span:hover{background:#fff;color:var(--blue)}
+  .cep-box{margin-top:32px;max-width:500px;position:relative}
+  .cep-box .lbl{font-weight:600;font-size:14.5px;color:#C4D5F5;margin-bottom:10px}
+  .cep-form{display:flex;gap:10px;flex-wrap:wrap}
+  .cep-form input{flex:1;min-width:170px;padding:15px 18px;border-radius:12px;border:0;font-size:16px;font-family:inherit;background:#fff;color:var(--ink);outline:2px solid transparent;transition:outline-color .2s}
+  .cep-form input:focus{outline-color:var(--red)}
+  .cep-form button{padding:15px 26px;border-radius:12px;border:0;background:var(--red);color:#fff;font-weight:700;font-family:inherit;font-size:15px;cursor:pointer;transition:.25s var(--ease)}
+  .cep-form button:hover{transform:translateY(-2px);background:#fff;color:var(--blue)}
+  .cep-result{margin-top:14px;font-weight:600;font-size:15px;min-height:22px;line-height:1.45}
+  .cep-result.ok{color:#7CF0B0}
+  .cep-result.no{color:#FFC4B8}
+  .cep-result b{color:#fff}
+
+  /* AVALIAÇÕES */
+  .revs{display:grid;grid-template-columns:.85fr 1fr 1fr;gap:18px;margin-top:48px;align-items:stretch}
+  @media(max-width:880px){.revs{grid-template-columns:1fr}}
+  .rev-summary{background:linear-gradient(165deg,var(--blue),#0a2a6b);color:#fff;border-radius:var(--radius);padding:32px;display:flex;flex-direction:column;justify-content:center;box-shadow:var(--shadow)}
+  .rev-summary .g-row{display:flex;align-items:center;gap:10px;font-weight:700;font-size:15px;color:#E8EEFB;margin-bottom:16px}
+  .rev-summary .g-row svg{background:#fff;border-radius:50%;padding:5px;box-sizing:content-box;flex-shrink:0}
+  .rev-summary .big{font-family:'Sora';font-weight:800;font-size:64px;line-height:1;letter-spacing:-.03em}
+  .rev-summary .stars{color:#FFB400;font-size:20px;letter-spacing:2px;margin-top:8px}
+  .rev-summary .src{color:#B7CBF0;margin-top:10px;font-size:14.5px}
+  .rev-summary .src b{color:#fff}
+  .rev{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;display:flex;flex-direction:column;transition:.35s var(--ease)}
+  .rev:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+  .rev .stars{color:#FFB400;font-size:15px;letter-spacing:1px}
+  .rev p{margin:12px 0 18px;font-size:15.5px;color:var(--ink);flex:1}
+  .rev .who{display:flex;align-items:center;gap:12px}
+  .rev .who .av{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--blue-mid),var(--red));color:#fff;display:grid;place-items:center;font-family:'Sora';font-weight:800;flex-shrink:0}
+  .rev .who b{font-family:'Sora';font-weight:700;font-size:15px;display:block}
+  .rev .who small{color:var(--muted);font-size:13px}
+
+  /* CONTATO — CTA final */
+  .cta-band{background:linear-gradient(135deg,var(--blue),var(--blue-mid));color:#fff;border-radius:var(--radius);padding:clamp(40px,6vw,72px);position:relative;overflow:hidden;box-shadow:var(--shadow)}
+  .cta-band svg.arc{position:absolute;top:-34%;right:-12%;width:62%;opacity:.13;pointer-events:none}
+  .cta-band .eyebrow{color:#fff}.cta-band .eyebrow::before{background:#fff}
+  .cta-band h2{font-family:'Sora';font-weight:800;font-size:clamp(30px,5vw,50px);letter-spacing:-.03em;position:relative;max-width:600px}
+  .cta-band p{color:#C4D5F5;margin-top:12px;max-width:480px;position:relative}
+  .cta-band .acts{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px;position:relative}
+  .cta-band .b-white{background:#fff;color:var(--blue);padding:16px 28px;border-radius:12px;font-weight:700;transition:.25s var(--ease)}
+  .cta-band .b-white:hover{transform:translateY(-3px);background:var(--red);color:#fff}
+  .cta-band .b-wa{background:var(--green);color:#fff;padding:16px 26px;border-radius:12px;font-weight:700;display:inline-flex;align-items:center;gap:9px;transition:.25s var(--ease)}
+  .cta-band .b-wa:hover{transform:translateY(-3px)}
+  .cta-contacts{display:flex;flex-wrap:wrap;gap:18px 44px;margin-top:38px;padding-top:30px;border-top:1px solid rgba(255,255,255,.18);position:relative}
+  .cta-contacts .item{display:flex;align-items:center;gap:12px}
+  .cta-contacts .item .ic{color:#84B3FF;flex-shrink:0}
+  .cta-contacts .item small{display:block;color:#9DB6E6;font-size:12px;text-transform:uppercase;letter-spacing:.04em}
+  .cta-contacts .item b{font-family:'Sora';font-weight:700;font-size:16.5px}
+
+  /* FOOTER */
+  footer{background:var(--ink);color:#fff}
+  footer .wrap{padding:56px 28px 40px}
+  footer .top{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;padding-bottom:32px;border-bottom:1px solid rgba(255,255,255,.12);align-items:center}
+  footer .lchip{background:#fff;border-radius:14px;padding:12px 18px;display:inline-flex}
+  footer .lchip img{height:30px;display:block}
+  footer .ftop{display:grid;grid-template-columns:1.15fr 2fr;gap:48px;padding-bottom:36px;border-bottom:1px solid rgba(255,255,255,.12)}
+  @media(max-width:820px){footer .ftop{grid-template-columns:1fr;gap:34px}}
+  footer .fbrand p{color:rgba(255,255,255,.55);font-size:14px;margin-top:16px;max-width:320px;line-height:1.6}
+  footer .fsocial{display:flex;gap:10px;margin-top:18px}
+  footer .fsocial a{width:38px;height:38px;border-radius:10px;background:rgba(255,255,255,.08);display:grid;place-items:center;color:#fff;transition:.25s var(--ease)}
+  footer .fsocial a:hover{background:var(--red);transform:translateY(-3px)}
+  footer .fcols{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  @media(max-width:520px){footer .fcols{grid-template-columns:1fr 1fr}}
+  footer .fcol h4{font-family:'Sora';font-weight:700;font-size:13.5px;margin-bottom:13px;color:#fff;letter-spacing:.02em}
+  footer .fcol a{display:block;color:rgba(255,255,255,.6);font-size:14px;padding:5px 0;transition:color .2s}
+  footer .fcol a:hover{color:#fff}
+  footer .fpay{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:22px 0;border-bottom:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.5);font-size:13px}
+  footer .pays{display:flex;gap:8px;flex-wrap:wrap}
+  footer .pays i{font-style:normal;font-size:12px;font-weight:700;color:#fff;background:rgba(255,255,255,.1);padding:6px 12px;border-radius:7px}
+  footer .legal{padding-top:24px;color:rgba(255,255,255,.55);font-size:13.5px;line-height:1.7}
+  footer .legal b{color:rgba(255,255,255,.85)}
+
+  .wa-float{position:fixed;bottom:24px;right:24px;z-index:200;width:60px;height:60px;border-radius:50%;background:var(--green);display:grid;place-items:center;box-shadow:0 14px 32px -8px rgba(31,168,85,.6);transition:transform .25s var(--ease)}
+  .wa-float:hover{transform:scale(1.08)}
+
+  .reveal{opacity:0;transform:translateY(30px);filter:blur(6px);transition:opacity .75s var(--ease),transform .75s var(--ease),filter .75s var(--ease)}
+  .reveal.in{opacity:1;transform:none;filter:none}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;filter:none}.badge .pulse::before{animation:none}}
+</style>
+</head>
+<body id="top">
+<div class="topbar"></div>
+
+<nav id="nav">
+  <a href="#top" class="logo"><img src="logo-conexaovip.webp" alt="Conexão VIP"></a>
+  <div class="links">
+    <a href="#planos">Internet Fibra</a>
+    <a href="#servicos">Móvel 5G</a>
+    <a href="#experiencia">Apps e Benefícios</a>
+    <a href="#" class="nav-cta assinante">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      <span>Central do Assinante</span>
+    </a>
+  </div>
+</nav>
+
+<header>
+  <div class="hero-rule"></div>
+  <svg class="hero-arc" viewBox="0 0 600 200" fill="none"><path d="M10 150C120 40 480 40 590 110" stroke="#fff" stroke-width="30" stroke-linecap="round"/></svg>
+  <div class="wrap">
+    <div class="hgrid">
+      <div class="hcol-text">
+        <div class="badge reveal"><span class="pulse"></span> Fibra óptica de verdade · sem franquia</div>
+        <h1 class="hero display reveal">Internet Fibra,<br>Móvel <span class="b">5G</span>, Fixo<br>e <em>Câmeras</em>.</h1>
+        <p class="hero-sub reveal">Fique sempre conectado em Teófilo Otoni e em todo o Vale do Jequitinhonha — com a velocidade e o suporte que você merece.</p>
+        <div class="rating-inline reveal"><span class="stars">★★★★★</span> <b>4,8</b> <span>· 2.729 avaliações no Google</span></div>
+        <div class="hero-actions reveal">
+          <a href="#planos" class="btn btn-red">Ver planos →</a>
+          <a href="https://wa.me/5533988056269" target="_blank" rel="noopener" class="btn btn-wa">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-1.04z"/></svg>
+            Falar no WhatsApp
+          </a>
+        </div>
+      </div>
+      <div class="hcol-img reveal">
+        <span class="rings"></span>
+        <span class="disc"></span>
+        <img src="modelo.webp" alt="Cliente Conexão VIP usando a internet fibra" width="540" height="643" fetchpriority="high">
+      </div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="trust reveal">
+      <div class="t"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0114 0M2 8.82a15 15 0 0120 0M12 20h.01"/></svg></span><div><b>Wi-Fi 6GHz</b><small>grátis na sua casa</small></div></div>
+      <div class="t"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg></span><div><b>Instalação grátis</b><small>sem taxa de adesão</small></div></div>
+      <div class="t"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zM12 6v6l4 2"/></svg></span><div><b>Suporte 24h</b><small>todos os dias</small></div></div>
+      <div class="t"><span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h7v8l10-12h-7z"/></svg></span><div><b>Sem franquia</b><small>velocidade real</small></div></div>
+    </div>
+  </div>
+</header>
+
+<!-- PLANOS -->
+<section id="planos" class="soft">
+  <div class="wrap">
+    <div class="reveal">
+      <span class="eyebrow">Para você</span>
+      <h2 class="sec display">Mantenha sua casa conectada.</h2>
+      <p class="sec-intro">Todos os planos incluem Wi-Fi, instalação grátis e suporte 24h. Escolha sua velocidade:</p>
+      <div class="tab"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0114 0M2 8.82a15 15 0 0120 0M12 20h.01"/></svg> Internet Fibra</div>
+    </div>
+    <div class="plans">
+      <div class="plan reveal">
+        <span class="name">Mais em conta</span>
+        <div class="speed">80<sub>Mega</sub></div>
+        <ul class="feats">
+          <li><span class="chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg></span> Roteador em comodato</li>
+          <li><span class="chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg></span> Wi-Fi 5GHz grátis</li>
+          <li><span class="chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg></span> Instalação grátis · Suporte 24h</li>
+        </ul>
+        <div class="apps"><span class="lbl">FibraTV incluso</span></div>
+        <div class="price"><span class="v"><sup>R$</sup>79,90</span> <span class="per">/mês</span></div>
+        <div class="per-day">≈ R$ 2,66 por dia</div>
+        <a href="https://wa.me/5533988056269" target="_blank" rel="noopener" class="cta">Assinar</a>
+      </div>
+
+      <div class="plan reveal">
+        <span class="name">Básico</span>
+        <div class="speed">350<sub>Mega</sub></div>
+        <ul class="feats">
+          <li><span class="chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg></span> Roteador em comodato</li>
+          <li><span class="chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg></span> Wi-Fi 5GHz grátis</li>
+          <li><span class="chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg></span> Instalação grátis · Suporte 24h</li>
+        </ul>
+        <div class="apps"><span class="lbl">FibraTV incluso</span></div>
+        <div class="price"><span class="v"><sup>R$</sup>84,90</span> <span class="per">/mês</span></div>
+        <div class="per-day">≈ R$ 2,83 por dia</div>
+        <a href="https://wa.me/5533988056269" target="_blank" rel="noopener" class="cta">Assinar</a>
+      </div>
+
+      <div class="plan feat reveal">
+        <span class="tag">★ Mais contratado</span>
+        <span class="name">Queridinho</span>
+        <div class="speed">700<sub>Mega</sub></div>
+        <ul class="feats">
+          <li><span class="chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg></span> Wi-Fi 6GHz grátis</li>
+          <li><span class="chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg></span> Streaming incluso</li>
+          <li><span class="chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg></span> Instalação grátis · Suporte 24h</li>
+        </ul>
+        <div class="apps"><img src="logos/deezer.svg" alt="Deezer"><img src="logos/disney.svg" alt="Disney+"><img src="logos/globoplay.png" alt="Globoplay"></div>
+        <div class="price"><span class="v"><sup>R$</sup>99,90</span> <span class="per">/mês</span></div>
+        <div class="per-day">≈ R$ 3,33 por dia</div>
+        <a href="https://wa.me/5533988056269" target="_blank" rel="noopener" class="cta">Assinar agora</a>
+      </div>
+
+      <div class="plan reveal">
+        <span class="name">Gaming</span>
+        <div class="speed">1<sub>Giga</sub></div>
+        <ul class="feats">
+          <li><span class="chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg></span> Latência baixa pra jogos</li>
+          <li><span class="chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg></span> Wi-Fi 6GHz grátis</li>
+          <li><span class="chk"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke-width="3.5"><path d="M20 6L9 17l-5-5"/></svg></span> Streaming + apps inclusos</li>
+        </ul>
+        <div class="apps"><img src="logos/disney.svg" alt="Disney+"><img src="logos/globoplay.png" alt="Globoplay"><img src="logos/deezer.svg" alt="Deezer"></div>
+        <div class="price"><span class="v"><sup>R$</sup>149,90</span> <span class="per">/mês</span></div>
+        <div class="per-day">≈ R$ 5,00 por dia</div>
+        <a href="https://wa.me/5533988056269" target="_blank" rel="noopener" class="cta">Assinar</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIÊNCIA / STREAMING -->
+<section id="experiencia">
+  <div class="wrap">
+    <div class="reveal"><span class="eyebrow">Benefícios exclusivos</span><h2 class="sec display">Streaming incluso no seu plano.</h2><p class="sec-intro">Planos selecionados já vêm com os apps que você ama — sem pagar nada a mais.</p></div>
+    <div class="brands">
+      <div class="brand-card reveal">
+        <span class="brand-logo"><span class="brand-wm" style="font-size:24px;color:#16161a">HBO&nbsp;<span style="color:#7E5BFF">Max</span></span></span>
+        <p>Séries como A Casa do Dragão, filmes, esportes e muito mais.</p>
+      </div>
+      <div class="brand-card reveal">
+        <span class="brand-logo"><img src="logos/globoplay.png" alt="Globoplay"></span>
+        <p>Novelas, séries, desenhos e conteúdos exclusivos.</p>
+      </div>
+      <div class="brand-card reveal">
+        <span class="brand-logo"><img src="logos/deezer.svg" alt="Deezer"></span>
+        <p>Milhões de músicas, playlists e podcasts.</p>
+      </div>
+      <div class="brand-card reveal">
+        <span class="brand-logo"><img src="logos/disney.svg" alt="Disney+" style="height:50px"></span>
+        <p>Marvel, Star Wars, Pixar e clássicos Disney.</p>
+      </div>
+      <div class="brand-card reveal">
+        <span class="brand-logo"><img src="logos/prime-video.png" alt="Prime Video" style="height:48px"></span>
+        <p>Filmes, séries e produções originais Amazon.</p>
+      </div>
+      <div class="brand-card reveal">
+        <span class="brand-logo"><span class="brand-wm" style="font-size:22px"><span style="color:#E11C1C">Fibra</span><span style="color:#0F3A8E">TV</span></span></span>
+        <p>Canais de TV ao vivo, em todas as suas telas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section id="servicos" class="soft">
+  <div class="wrap">
+    <div class="reveal"><span class="eyebrow">Tudo num lugar só</span><h2 class="sec display">Muito além da internet.</h2></div>
+    <div class="services">
+      <div class="svc reveal"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="3"/><path d="M11 18h2"/></svg></div><h3>Móvel 5G</h3><p>Plano de celular com a velocidade do 5G e cobertura na região.</p></div>
+      <div class="svc reveal"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg></div><h3>Telefone fixo</h3><p>Linha fixa com ligações ilimitadas. Ideal pra empresas e residências.</p></div>
+      <div class="svc reveal"><div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div><h3>Câmeras de segurança</h3><p>Monitore sua casa ou empresa em tempo real pelo celular.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- APP CLIENTE -->
+<section>
+  <div class="wrap">
+    <div class="appc">
+      <div class="txt reveal">
+        <span class="eyebrow">Na palma da mão</span>
+        <h2 class="sec display" style="font-size:clamp(30px,4.6vw,46px)">App do Cliente</h2>
+        <p class="sec-intro">Gerencie sua conexão com rapidez. Em poucos cliques você resolve tudo, com total segurança.</p>
+        <div class="feat-list">
+          <div class="fl"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6"/></svg></div><b>2ª via de fatura</b><small>Na hora</small></div>
+          <div class="fl"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg></div><b>Extrato de tráfego</b><small>Seu consumo</small></div>
+          <div class="fl"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></div><b>Pagamento</b><small>Cartão ou PIX</small></div>
+        </div>
+        <div class="stores">
+          <a href="#" class="store-badge" aria-label="Disponível no Google Play">
+            <img src="logos/google-play.png" alt="" width="24" height="24" aria-hidden="true">
+            <span class="st-txt"><small>Disponível no</small><b>Google Play</b></span>
+          </a>
+          <a href="#" class="store-badge" aria-label="Baixar na App Store">
+            <img src="logos/apple.svg" alt="" width="20" height="22" style="filter:brightness(0) invert(1)" aria-hidden="true">
+            <span class="st-txt"><small>Baixar na</small><b>App Store</b></span>
+          </a>
+        </div>
+      </div>
+      <div class="mock reveal">
+        <div class="phone"><span class="notch"></span>
+          <div class="bar" style="margin-top:14px"></div><div class="bar w"></div>
+          <div class="grid">
+            <i style="background:var(--red)"></i><i style="background:var(--blue-mid)"></i><i style="background:var(--soft)"></i>
+            <i style="background:var(--blue)"></i><i style="background:var(--red)"></i><i style="background:var(--soft)"></i>
+            <i style="background:var(--soft)"></i><i style="background:var(--blue-mid)"></i><i style="background:var(--red)"></i>
+          </div>
+          <div class="bar" style="margin-top:auto"></div><div class="bar w"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CENTRAL ATENDIMENTO -->
+<section class="soft" id="atendimento">
+  <div class="wrap">
+    <div class="help-wrap">
+      <div class="help-intro reveal">
+        <span class="eyebrow">Estamos aqui</span>
+        <h2 class="sec display">Central de atendimento.</h2>
+        <p class="sec-intro">Sua conexão com a gente, sempre que precisar — resolvemos com rapidez e sem enrolação.</p>
+        <a href="https://wa.me/5533988056269" target="_blank" rel="noopener" class="wa-cta">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24z"/></svg>
+          Falar agora no WhatsApp
+        </a>
+      </div>
+      <div class="help-list reveal">
+        <a href="#" class="help-row">
+          <span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></svg></span>
+          <span class="tx"><b>2ª via de fatura</b><small>Tire sua segunda via na central do assinante.</small></span>
+          <span class="ar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 6l6 6-6 6"/></svg></span>
+        </a>
+        <a href="#" class="help-row">
+          <span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2A19.79 19.79 0 013.07 4.18 2 2 0 015.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0122 16.92z"/></svg></span>
+          <span class="tx"><b>Suporte técnico</b><small>Atendimento especializado — ligação grátis.</small></span>
+          <span class="ar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 6l6 6-6 6"/></svg></span>
+        </a>
+        <a href="#" class="help-row">
+          <span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+          <span class="tx"><b>Nossas lojas</b><small>Conheça as lojas físicas da Conexão VIP.</small></span>
+          <span class="ar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 6l6 6-6 6"/></svg></span>
+        </a>
+        <a href="#" class="help-row">
+          <span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="3"/><path d="M12 18h.01"/></svg></span>
+          <span class="tx"><b>App do Cliente</b><small>Fatura, consumo e pagamento na palma da mão.</small></span>
+          <span class="ar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 6l6 6-6 6"/></svg></span>
+        </a>
+        <a href="#" class="help-row">
+          <span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span>
+          <span class="tx"><b>App FibraTV</b><small>Assista aos canais de TV em todas as telas.</small></span>
+          <span class="ar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 6l6 6-6 6"/></svg></span>
+        </a>
+        <a href="#" class="help-row">
+          <span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 100 20 10 10 0 000-20z"/><path d="M12 12l4-2"/></svg></span>
+          <span class="tx"><b>Teste de velocidade</b><small>Meça sua conexão em tempo real.</small></span>
+          <span class="ar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 6l6 6-6 6"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AVALIAÇÕES -->
+<section id="avaliacoes">
+  <div class="wrap">
+    <div class="reveal"><span class="eyebrow">Quem é VIP, recomenda</span><h2 class="sec display">Nota 4,8 no Google.</h2><p class="sec-intro">Mais de 2.700 clientes já avaliaram a Conexão VIP. Veja o que eles dizem:</p></div>
+    <div class="revs">
+      <div class="rev-summary reveal">
+        <div class="g-row">
+          <svg viewBox="0 0 48 48" width="30" height="30" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3c-1.6 4.7-6.1 8-11.3 8-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.3-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 16 18 13.6 24 13.6c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-7.9l-6.5 5C9.6 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C39.9 36.5 44 31 44 24c0-1.3-.1-2.3-.4-3.5z"/></svg>
+          <span>Avaliações no Google</span>
+        </div>
+        <div class="big">4,8</div>
+        <div class="stars">★★★★★</div>
+        <div class="src">Média de <b>2.729 avaliações</b> reais de clientes</div>
+      </div>
+      <div class="rev reveal">
+        <div class="stars">★★★★★</div>
+        <p>“Atendimento excelente! Resolvem as coisas rápido, são bem atenciosos. Estou amando a experiência!”</p>
+        <div class="who"><span class="av">J</span><div><b>Jeito de Meninna</b><small>há 2 meses · Google</small></div></div>
+      </div>
+      <div class="rev reveal">
+        <div class="stars">★★★★★</div>
+        <p>“Adorei o atendimento. Muito bom, muito bom mesmo!”</p>
+        <div class="who"><span class="av">G</span><div><b>Giane Gomes Teixeira</b><small>há 3 meses · Google</small></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COBERTURA -->
+<section id="cobertura">
+  <div class="wrap">
+    <div class="cover reveal">
+      <svg class="arc" viewBox="0 0 600 200" fill="none"><path d="M10 150C120 40 480 40 590 110" stroke="#fff" stroke-width="34" stroke-linecap="round"/></svg>
+      <span class="eyebrow">Onde a gente chega</span>
+      <h2>Presente em 9 cidades do Vale.</h2>
+      <div class="cities">
+        <span>Teófilo Otoni</span><span>Almenara</span><span>Araçuaí</span><span>Itaobim</span><span>Jequitinhonha</span><span>Medina</span><span>Nanuque</span><span>Padre Paraíso</span><span>Salinas</span>
+      </div>
+      <div class="cep-box">
+        <div class="lbl">Tem Conexão VIP no seu endereço? Consulte pelo CEP:</div>
+        <form class="cep-form" id="cepForm" autocomplete="off">
+          <input id="cepInput" type="text" inputmode="numeric" maxlength="9" placeholder="Digite seu CEP (ex.: 39800-000)" aria-label="CEP">
+          <button type="submit">Consultar cobertura</button>
+        </form>
+        <div class="cep-result" id="cepResult" role="status" aria-live="polite"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="faq-head reveal">
+      <span class="eyebrow">Dúvidas frequentes</span>
+      <h2 class="sec display">Perguntas frequentes.</h2>
+    </div>
+    <div class="faq">
+      <details class="reveal"><summary>A Conexão VIP tem fidelidade? <span class="pl"></span></summary><div class="ans">Trabalhamos sem fidelidade obrigatória na maioria dos planos — você assina e cancela quando quiser, sem multa surpresa. As condições do seu plano são confirmadas na contratação.</div></details>
+      <details class="reveal"><summary>Quanto tempo leva a instalação? <span class="pl"></span></summary><div class="ans">Depois de contratar, nossa equipe agenda a instalação rapidamente, normalmente em poucos dias úteis. A instalação e o roteador são <strong>grátis</strong>, sem taxa de adesão.</div></details>
+      <details class="reveal"><summary>Quais as formas de pagamento? <span class="pl"></span></summary><div class="ans">Você paga pelo app com cartão de crédito, PIX ou boleto. A 2ª via da fatura fica disponível na Central do Assinante a qualquer momento.</div></details>
+      <details class="reveal"><summary>Os streamings estão inclusos em qualquer plano? <span class="pl"></span></summary><div class="ans">Os apps (HBO Max, Disney+, Prime Video, Globoplay e Deezer) acompanham planos selecionados, sem custo extra. Confirme quais estão inclusos no plano escolhido.</div></details>
+      <details class="reveal"><summary>Vocês atendem a minha cidade? <span class="pl"></span></summary><div class="ans">Estamos em 9 cidades do Vale do Jequitinhonha. Fale com a gente no WhatsApp para confirmar a cobertura de fibra no seu endereço.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <svg class="arc" viewBox="0 0 600 200" fill="none"><path d="M10 150C120 40 480 40 590 110" stroke="#fff" stroke-width="30" stroke-linecap="round"/></svg>
+      <span class="eyebrow">Fale com a gente</span>
+      <h2>Pronto pra ter internet de verdade?</h2>
+      <p>Assine em minutos pelo WhatsApp. Atendimento de segunda a sexta, 8h às 18h, e sábados pela manhã.</p>
+      <div class="acts">
+        <a href="#planos" class="b-white">Ver planos</a>
+        <a href="https://wa.me/5533988056269" target="_blank" rel="noopener" class="b-wa">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24z"/></svg>
+          Falar no WhatsApp
+        </a>
+      </div>
+      <div class="cta-contacts">
+        <a href="tel:08004641010" class="item"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2A19.79 19.79 0 013.07 4.18 2 2 0 015.11 2h3a2 2 0 012 1.72c.13.96.36 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6"/></svg></span><div><small>Suporte fibra</small><b>0800 464 1010</b></div></a>
+        <a href="https://wa.me/5533988056269" target="_blank" rel="noopener" class="item"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24z"/></svg></span><div><small>WhatsApp</small><b>(33) 98805-6269</b></div></a>
+        <a href="mailto:conexaovip@conexaovip.net.br" class="item"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 5L2 7"/></svg></span><div><small>E-mail</small><b>conexaovip@conexaovip.net.br</b></div></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="ftop">
+      <div class="fbrand">
+        <span class="lchip"><img src="logo-conexaovip.webp" alt="Conexão VIP"></span>
+        <p>Internet fibra óptica de verdade no Vale do Jequitinhonha. Conexão estável, velocidade real e suporte de gente que atende.</p>
+        <div class="fsocial">
+          <a href="#" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v2H8v3h2v7h3v-7h3l1-3h-4v-2c0-.6.4-1 1-1z"/></svg></a>
+          <a href="https://wa.me/5533988056269" target="_blank" rel="noopener" aria-label="WhatsApp"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24z"/></svg></a>
+        </div>
+      </div>
+      <div class="fcols">
+        <div class="fcol"><h4>SOLUÇÕES</h4><a href="#planos">Internet Fibra</a><a href="#servicos">Móvel 5G</a><a href="#servicos">Telefone fixo</a><a href="#servicos">Câmeras de segurança</a></div>
+        <div class="fcol"><h4>ATENDIMENTO</h4><a href="#">Central do Assinante</a><a href="#atendimento">2ª via de fatura</a><a href="#atendimento">Suporte técnico</a><a href="#cobertura">Nossas lojas</a></div>
+        <div class="fcol"><h4>LEGAL</h4><a href="#">Contrato de Prestação</a><a href="#">Contrato de Permanência</a><a href="#">Condições Específicas</a><a href="#">Relatório de Transparência</a></div>
+      </div>
+    </div>
+    <div class="fpay">
+      <span>Formas de pagamento:</span>
+      <div class="pays"><i>PIX</i><i>Visa</i><i>Mastercard</i><i>Elo</i><i>Boleto</i></div>
+    </div>
+    <div class="legal">
+      <b>CONEXÃO VIP SERVIÇOS &amp; INTERNET LTDA</b> — CNPJ: 13.789.781/0001-97<br>
+      Av. Francisco Sá, 560 — Centro, Teófilo Otoni, MG, Brasil · CEP 39800-127<br>
+      © <span id="yr"></span> Conexão VIP — Internet Fibra Óptica. Todos os direitos reservados.
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/5533988056269" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg width="32" height="32" viewBox="0 0 24 24" fill="#fff"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-1.04z"/></svg>
+</a>
+
+<script>
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  const nav=document.getElementById('nav');
+  const onScroll=()=>nav.classList.toggle('scrolled',window.scrollY>20);
+  onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+  const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1,rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.reveal').forEach((el)=>{
+    const sib=[...el.parentElement.querySelectorAll(':scope > .reveal')];
+    el.style.transitionDelay=Math.min(sib.indexOf(el),5)*70+'ms';
+    io.observe(el);
+  });
+
+  // Scrollspy — destaca o link da seção visível no menu
+  const navLinks = [...document.querySelectorAll('nav .links a[href^="#"]')].filter(a => !a.classList.contains('nav-cta'));
+  const spy = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id));
+      }
+    });
+  }, { rootMargin: '-45% 0px -50% 0px' });
+  ['planos','experiencia','servicos'].forEach(id => { const s = document.getElementById(id); if (s) spy.observe(s); });
+
+  // Consulta de cobertura por CEP (ViaCEP) — checa se a cidade é atendida
+  const cidadesAtendidas = ['teofilo otoni','almenara','aracuai','itaobim','jequitinhonha','medina','nanuque','padre paraiso','salinas'];
+  const norm = s => (s||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').trim();
+  const cepForm = document.getElementById('cepForm');
+  if (cepForm) {
+    const inp = document.getElementById('cepInput');
+    const res = document.getElementById('cepResult');
+    inp.addEventListener('input', () => {
+      let v = inp.value.replace(/\D/g,'').slice(0,8);
+      if (v.length > 5) v = v.slice(0,5) + '-' + v.slice(5);
+      inp.value = v;
+    });
+    cepForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const cep = inp.value.replace(/\D/g,'');
+      res.className = 'cep-result';
+      if (cep.length !== 8) { res.textContent = 'Digite um CEP válido com 8 dígitos.'; res.classList.add('no'); return; }
+      res.textContent = 'Consultando…';
+      try {
+        const r = await fetch('https://viacep.com.br/ws/' + cep + '/json/');
+        const d = await r.json();
+        if (d.erro) { res.textContent = 'CEP não encontrado. Confira o número.'; res.classList.add('no'); return; }
+        if (cidadesAtendidas.includes(norm(d.localidade))) {
+          res.innerHTML = '✅ Boa notícia! A Conexão VIP atende <b>' + d.localidade + ' – ' + d.uf + '</b>. Fale com a gente para assinar!';
+          res.classList.add('ok');
+        } else {
+          res.innerHTML = 'Ainda não chegamos em <b>' + (d.localidade || 'sua cidade') + '</b>, mas estamos expandindo. Deixe seu contato no WhatsApp!';
+          res.classList.add('no');
+        }
+      } catch (err) {
+        res.textContent = 'Não foi possível consultar agora. Tente pelo WhatsApp.';
+        res.classList.add('no');
+      }
+    });
+  }
+</script>
+</body>
+</html>
