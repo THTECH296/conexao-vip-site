@@ -2,3 +2,6 @@
 Thumbs.db
 *.log
 node_modules/
+
+# Leads capturados pelo backend PHP (dados de visitantes)
+api/leads.jsonl

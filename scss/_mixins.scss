@@ -1,0 +1,30 @@
+// ── Mixins reutilizáveis ──
+
+@mixin flex-center($gap: 0) {
+  display: flex;
+  align-items: center;
+  @if $gap != 0 {
+    gap: $gap;
+  }
+}
+
+// Eleva o elemento com sombra (usado em cards no hover)
+@mixin lift($y: -6px) {
+  transform: translateY($y);
+  box-shadow: var(--shadow);
+}
+
+// Card de superfície branca padrão
+@mixin surface($pad: 28px) {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: $pad;
+}
+
+// Media query mobile-first helper
+@mixin until($w) {
+  @media (max-width: $w) {
+    @content;
+  }
+}

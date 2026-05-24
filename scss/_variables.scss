@@ -1,0 +1,21 @@
+// ── Paleta e tokens da marca Conexão VIP (vermelho + azul) ──
+$red:         #E11C1C;
+$red-dark:    #B81414;
+$blue:        #0F3A8E; // azul profundo (estrutura/texto)
+$blue-mid:    #1C5BC0; // azul do swoosh
+$blue-bright: #2E7BE6; // azul claro p/ gradiente
+$ink:         #13233F; // texto principal (navy)
+$muted:       #5C6B85;
+$bg:          #FFFFFF;
+$soft:        #F3F6FC;
+$line:        #E4EAF4;
+$green:       #1FA855;
+
+$radius: 20px;
+$ease:   cubic-bezier(.22, 1, .36, 1);
+$maxw:   1180px;
+$shadow: 0 24px 60px -30px rgba($blue, .45);
+
+// Breakpoints
+$bp-md: 900px;
+$bp-sm: 560px;
