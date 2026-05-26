@@ -41,8 +41,32 @@
   nav .links a.active:not(.nav-cta)::after,nav .links a:not(.nav-cta):hover::after{width:100%}
   nav .nav-cta{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:100px;background:var(--red);color:#fff!important;font-weight:700;box-shadow:0 10px 24px -12px var(--red);transition:.25s var(--ease)}
   nav .nav-cta:hover{transform:translateY(-2px);background:var(--red-dark)}
-  @media(max-width:940px){nav .links a:not(.nav-cta):not(.assinante){display:none}}
-  @media(max-width:520px){nav .links .assinante span{display:none}nav .logo img{height:28px}}
+  /* botão hambúrguer (só aparece no mobile) */
+  .nav-toggle{display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;width:44px;height:44px;background:none;border:0;cursor:pointer;padding:0}
+  .nav-toggle span{width:24px;height:2px;background:var(--ink);border-radius:2px;transition:.3s var(--ease)}
+  @media(max-width:940px){
+    nav{padding:12px 20px}
+    .nav-toggle{display:flex}
+    nav .links{
+      position:absolute;top:100%;left:0;right:0;
+      flex-direction:column;align-items:stretch;gap:0;
+      padding:8px 20px 18px;
+      background:rgba(255,255,255,.98);backdrop-filter:blur(12px);
+      border-bottom:1px solid var(--line);
+      box-shadow:0 22px 44px -26px rgba(15,58,142,.5);
+      opacity:0;visibility:hidden;transform:translateY(-10px);
+      transition:opacity .28s var(--ease),transform .28s var(--ease),visibility .28s;
+    }
+    nav.open .links{opacity:1;visibility:visible;transform:none}
+    nav .links a:not(.nav-cta){display:block;padding:15px 4px;font-size:16px;color:var(--ink);border-bottom:1px solid var(--line)}
+    nav .links a:not(.nav-cta)::after{display:none}
+    nav .links .nav-cta{margin-top:14px;justify-content:center}
+    nav .links .assinante span{display:inline}
+    nav.open .nav-toggle span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+    nav.open .nav-toggle span:nth-child(2){opacity:0}
+    nav.open .nav-toggle span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  }
+  @media(max-width:520px){nav .logo img{height:28px}}
 
   /* HERO — campo azul imersivo + modelo recortada + tipografia editorial */
   header{position:relative;color:#fff;overflow:hidden;background:radial-gradient(125% 130% at 78% 0%,#1F62CC 0%,#103A8E 46%,#0A2657 100%)}
@@ -339,4 +363,28 @@
     margin-top:12px; font-weight:600; font-size:14.5px; min-height:20px; position:relative;
     &.ok{ color:#7CF0B0; }
     &.no{ color:#FFC4B8; }
+  }
+
+  // ============================================================
+  // AJUSTES MOBILE — respiro, sem overflow, CTAs cheios
+  // ============================================================
+  @media(max-width:640px){
+    section{padding:54px 0}
+    .wrap{padding:0 18px}
+    footer .wrap{padding:48px 18px 36px}
+    h1.hero{line-height:1.06}
+    .hero-sub{margin-top:18px}
+    // botões do hero empilham e ocupam a largura toda (fim do corte na borda)
+    .hero-actions{flex-direction:column;align-items:stretch;gap:11px}
+    .hero-actions .btn{width:100%;justify-content:center}
+    // e-mail/telefone longos não estouram
+    .cta-contacts{gap:16px 28px}
+    .cta-contacts .item{flex:1 1 100%}
+    .cta-contacts .item b{font-size:15.5px;overflow-wrap:anywhere}
+    // formulários: botão ocupa a linha toda no celular
+    .cep-form button,.lead-form button{flex:1 1 100%}
+  }
+  @media(max-width:380px){
+    h1.hero{font-size:34px}
+    .plan .speed{font-size:46px}
   }

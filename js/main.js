@@ -16,6 +16,20 @@
         };
         onScroll();
         window.addEventListener('scroll', onScroll, { passive: true });
+        // Menu mobile (hambúrguer): abre/fecha e fecha ao clicar num link
+        const navToggle = document.querySelector('.nav-toggle');
+        if (navToggle) {
+            navToggle.addEventListener('click', () => {
+                const open = nav.classList.toggle('open');
+                navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+            });
+            nav.querySelectorAll('.links a').forEach((link) => {
+                link.addEventListener('click', () => {
+                    nav.classList.remove('open');
+                    navToggle.setAttribute('aria-expanded', 'false');
+                });
+            });
+        }
     }
     // Animações de entrada (desfoque → nítido) ao surgir na viewport
     const revealIO = new IntersectionObserver((entries) => {
