@@ -383,6 +383,14 @@
     .cta-contacts .item b{font-size:15.5px;overflow-wrap:anywhere}
     // formulários: botão ocupa a linha toda no celular
     .cep-form button,.lead-form button{flex:1 1 100%}
+    // STREAMING em 1 coluna no celular (em 2 col, logos largos tipo globoplay
+    // forçavam a coluna a não encolher e estouravam a tela em iPhones ~430px)
+    .brands{grid-template-columns:1fr}
+    // blindagem anti-overflow: cards de grid podem encolher e imagens nunca
+    // ultrapassam o container
+    .brand-card,.plan,.svc,.rev,.ec{min-width:0}
+    img{max-width:100%;height:auto}
+    .brand-logo img{max-width:100%}
   }
   @media(max-width:380px){
     h1.hero{font-size:34px}
